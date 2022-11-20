@@ -3,32 +3,38 @@ package com.example.lesson2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         logEvent("onCreate");
         if (savedInstanceState == null) {
             logEvent("onCreate first");
         } else {
             logEvent("onCreate relaunch");
         }
-        findViewById(R.id.key_1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent secondActivityIntent = new Intent(MainActivity.this, SecondActivity.class);
-            startActivity(secondActivityIntent);
-            }
-        });
+
     }
+
+
+
 
     @Override
     protected void onStart() {
