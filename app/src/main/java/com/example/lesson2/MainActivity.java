@@ -1,11 +1,13 @@
 package com.example.lesson2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,10 +18,16 @@ public class MainActivity extends AppCompatActivity {
         logEvent("onCreate");
         if (savedInstanceState == null) {
             logEvent("onCreate first");
-        }
-        else {
+        } else {
             logEvent("onCreate relaunch");
         }
+        findViewById(R.id.key_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent secondActivityIntent = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(secondActivityIntent);
+            }
+        });
     }
 
     @Override
@@ -60,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void logEvent(String event) {
-      Log.d ( "MainLog", event); }
+        Log.d("MainLog", event);
+    }
 
 }
