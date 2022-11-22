@@ -15,25 +15,96 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
+private int first_number = 0;
+private TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        erstNummer();
 
-
-
-        logEvent("onCreate");
-        if (savedInstanceState == null) {
-            logEvent("onCreate first");
-        } else {
-            logEvent("onCreate relaunch");
-        }
 
     }
+private void erstNummer() {
+    result = findViewById(R.id.first_number);
+    showResult();
 
+    findViewById(R.id.key_1).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 1;
+            showResult();
+        }
+    });
 
+    findViewById(R.id.key_2).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 2;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_3).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 3;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_4).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 4;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_5).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 5;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_6).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 6;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_7).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 7;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_8).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 8;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_9).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 9;
+            showResult();
+        }
+    });
+    findViewById(R.id.key_0).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            first_number = 0;
+            showResult();
+        }
+    });
+}
+private void showResult () {
+        result.setText(String.valueOf(first_number));
+}
 
 
     @Override
