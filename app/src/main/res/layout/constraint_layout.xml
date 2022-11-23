@@ -18,7 +18,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/second_number"
-        app:layout_constraintTop_toBottomOf="@id/key_dot"
+        app:layout_constraintTop_toBottomOf="@id/key_clear"
         app:layout_constraintStart_toEndOf="@id/first_number"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -132,10 +132,10 @@
         app:layout_constraintEnd_toEndOf="@id/key_8" />
 
     <Button
-        android:id="@+id/key_dot"
+        android:id="@+id/key_clear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/key_dot"
+        android:text="@string/key_clear"
         app:layout_constraintTop_toBottomOf="@id/key_9"
         app:layout_constraintStart_toStartOf="@id/key_9"
         app:layout_constraintEnd_toEndOf="@id/key_9" />
@@ -173,7 +173,7 @@
         android:layout_height="wrap_content"
         android:text="@string/key_divide"
         app:layout_constraintTop_toBottomOf="@id/key_multiply"
-        app:layout_constraintStart_toEndOf="@id/key_dot"
+        app:layout_constraintStart_toEndOf="@id/key_clear"
         app:layout_constraintEnd_toEndOf="@id/key_multiply" />
 
     <TextView
