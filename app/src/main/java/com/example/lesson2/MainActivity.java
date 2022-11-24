@@ -12,12 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private int first_number = 0;
-    private int second_number = 0;
+    private int second_number =0;
     private final int count = 10;
     private int operation = 0;
-    private double resultnumbers =0;
+    private int resultnumbers =0;
     private int counting =0;
     private TextView result;
+
+    // проблемы: деление на ноль, отображение секонд намбер в 0, неверное деление при результате в дробных числах
 
 
     @Override
@@ -146,10 +148,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (operation==0) {
-                    first_number = first_number * count ;
+                    first_number = first_number * count;
                     showResult();
                 } else {
-                    second_number = second_number * count ;
+                    second_number = second_number * count;
                 }
                 showResult();
             }
@@ -206,6 +208,7 @@ private  void CountingResult() {
     if (operation==2 && counting ==1) { resultnumbers = first_number - second_number; };
     if (operation==3 && counting ==1) { resultnumbers = first_number * second_number; };
     if (operation==4 && counting ==1) { resultnumbers = first_number / second_number; };
+    if (operation==4 && counting ==1 && second_number==0) {result.setText(String.valueOf("НИЗЯ!")); };
 
 
 }

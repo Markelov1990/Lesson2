@@ -11,18 +11,10 @@
         android:textSize="40sp"
         app:layout_constraintTop_toBottomOf="@id/key_0"
         app:layout_constraintStart_toStartOf="@id/key_0"
-        app:layout_constraintEnd_toStartOf="@id/second_number"
+        app:layout_constraintEnd_toEndOf="@id/key_divide"
         />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/second_number"
-        app:layout_constraintTop_toBottomOf="@id/key_clear"
-        app:layout_constraintStart_toEndOf="@id/first_number"
-        app:layout_constraintEnd_toEndOf="parent"
 
-        />
 
     <Button
         android:id="@+id/key_1"
@@ -176,14 +168,6 @@
         app:layout_constraintStart_toEndOf="@id/key_clear"
         app:layout_constraintEnd_toEndOf="@id/key_multiply" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/all_result"
-        app:layout_constraintTop_toBottomOf="@id/first_number"
-        app:layout_constraintEnd_toEndOf="@id/second_number"
-        app:layout_constraintStart_toStartOf="@id/first_number"
 
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
