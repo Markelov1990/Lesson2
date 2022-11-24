@@ -12,14 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private int first_number = 0;
-    private int second_number =0;
+    private int second_number = 0;
     private final int count = 10;
     private int operation = 0;
-    private int resultnumbers =0;
-    private int counting =0;
+    private int resultnumbers = 0;
+    private int counting = 0;
     private TextView result;
 
     // проблемы: деление на ноль, отображение секонд намбер в 0, неверное деление при результате в дробных числах
+    // Задачи второго уровня: стирание текста по одному символу, дробные числа
 
 
     @Override
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            erstNummer();
-            showResult();
+        erstNummer();
+        showResult();
     }
 
     private void erstNummer() {
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 1;
                     showResult();
                 } else {
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 2;
                     showResult();
                 } else {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 3;
                     showResult();
                 } else {
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 4;
                     showResult();
                 } else {
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 5;
                     showResult();
                 } else {
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 6;
                     showResult();
                 } else {
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 7;
                     showResult();
                 } else {
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_8).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 8;
                     showResult();
                 } else {
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count + 9;
                     showResult();
                 } else {
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation==0) {
+                if (operation == 0) {
                     first_number = first_number * count;
                     showResult();
                 } else {
@@ -203,15 +204,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-private  void CountingResult() {
-        if (operation==1 && counting ==1) { resultnumbers = first_number + second_number; };
-    if (operation==2 && counting ==1) { resultnumbers = first_number - second_number; };
-    if (operation==3 && counting ==1) { resultnumbers = first_number * second_number; };
-    if (operation==4 && counting ==1) { resultnumbers = first_number / second_number; };
-    if (operation==4 && counting ==1 && second_number==0) {result.setText(String.valueOf("НИЗЯ!")); };
+
+    private void CountingResult() {
+        if (operation == 1 && counting == 1) {
+            resultnumbers = first_number + second_number;
+        }
+        ;
+        if (operation == 2 && counting == 1) {
+            resultnumbers = first_number - second_number;
+        }
+        ;
+        if (operation == 3 && counting == 1) {
+            resultnumbers = first_number * second_number;
+        }
+        ;
+        if (operation == 4 && counting == 1) {
+            resultnumbers = first_number / second_number;
+        }
+        ;
+        if (operation == 4 && counting == 1 && second_number == 0) {
+            result.setText(String.valueOf("НИЗЯ!"));
+        }
+        ;
 
 
-}
+    }
+
     private void showResult() {
         result.setText(String.valueOf(first_number));
         if (operation == 1) {
@@ -238,16 +256,16 @@ private  void CountingResult() {
         if (operation == 1 && second_number != 0) {
             result.setText(String.valueOf(first_number + "  +  " + second_number));
         }
-        if (operation==1 && counting ==1) {
+        if (operation == 1 && counting == 1) {
             result.setText(String.valueOf(first_number + "  +  " + second_number + " = " + resultnumbers));
         }
-        if (operation==2 && counting ==1) {
+        if (operation == 2 && counting == 1) {
             result.setText(String.valueOf(first_number + "  -  " + second_number + " = " + resultnumbers));
         }
-        if (operation==3 && counting ==1) {
+        if (operation == 3 && counting == 1) {
             result.setText(String.valueOf(first_number + "  *  " + second_number + " = " + resultnumbers));
         }
-        if (operation==4 && counting ==1) {
+        if (operation == 4 && counting == 1) {
             result.setText(String.valueOf(first_number + "  /  " + second_number + " = " + resultnumbers));
         }
     }
