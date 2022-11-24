@@ -37,7 +37,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.key_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                first_number = first_number * count + 1;
+                if (operation==0) {
+                    first_number = first_number * count + 1;
+                    showResult();
+                } else {
+                    second_number = second_number * count + 1;
+                }
                 showResult();
             }
         });
@@ -110,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 first_number = 0;
                 operation = 0;
+                second_number = 0;
                 showResult();
             }
         });
@@ -256,11 +262,30 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showResult() {
         result.setText(String.valueOf(first_number));
-        if (operation == 1) { result.setText(String.valueOf(first_number + "  +")); }
-        if (operation == 2) { result.setText(String.valueOf(first_number + "  -")); }
-        if (operation == 3) { result.setText(String.valueOf(first_number + "  *")); }
-        if (operation == 4) { result.setText(String.valueOf(first_number + "  /")); }
-        if (operation == 4 && second_number !=0) { result.setText(String.valueOf(first_number + "  /  " + second_number)); }
+        if (operation == 1) {
+            result.setText(String.valueOf(first_number + "  +"));
+        }
+        if (operation == 2) {
+            result.setText(String.valueOf(first_number + "  -"));
+        }
+        if (operation == 3) {
+            result.setText(String.valueOf(first_number + "  *"));
+        }
+        if (operation == 4) {
+            result.setText(String.valueOf(first_number + "  /"));
+        }
+        if (operation == 4 && second_number != 0) {
+            result.setText(String.valueOf(first_number + "  /  " + second_number));
+        }
+        if (operation == 3 && second_number != 0) {
+            result.setText(String.valueOf(first_number + "  *  " + second_number));
+        }
+        if (operation == 2 && second_number != 0) {
+            result.setText(String.valueOf(first_number + "  -  " + second_number));
+        }
+        if (operation == 1 && second_number != 0) {
+            result.setText(String.valueOf(first_number + "  +  " + second_number));
+        }
     }
 
     @Override
