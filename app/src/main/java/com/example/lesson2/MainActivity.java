@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
             erstNummer();
             showResult();
-
-
-
     }
 
     private void erstNummer() {
