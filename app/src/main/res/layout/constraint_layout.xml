@@ -7,23 +7,19 @@
     tools:ignore="ExtraText">
 
 
-    // backgroundtint - в стиле
-    //corner radius - в стиле
-    //Inputedittext - что это?
-    //Scroll - сегодня
-    // horizontal - сегодня
-    // Кнопки другого цвета - в стиле
-    // тема темная/светлая - переключение между стилями
-    // размер шрифта - в стиле
-    // все внести в ресурсы @dimen @color - сегодня
-    // создать папку стайл в ресурсах - в стиле
-    //textappereance - прочитать
-    //statusbarcolor - прочитать
-    // локализация названия - прочитать
+    // backgroundtint - сделано
+    //corner radius - сделано
+    //Inputedittext - сделано
+    // Кнопки другого цвета -  сделано
+    // размер шрифта - сделано
+    // все внести в ресурсы @dimen @color - сделано
+    // создать папку стайл в ресурсах - сделано
+    //textappereance - сделано
+    //statusbarcolor - сделано
     // перенести текст выше - сделано
-    // coloronprimary - прочитать
+    // coloronprimary - сделано
     // все перевести на MaterialButtonstyle - сделано
-    // смена тем - завтра
+
 
 
     <TextView
@@ -36,6 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/key_plus"
+
         />
 
 
@@ -50,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/key_2"
+      style="@style/CalcStyle1"
 
         />
 
@@ -62,7 +60,8 @@
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_1"
-        app:layout_constraintEnd_toStartOf="@id/key_3" />
+        app:layout_constraintEnd_toStartOf="@id/key_3"
+        style="@style/CalcStyle1"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -74,7 +73,8 @@
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_2"
-        app:layout_constraintEnd_toEndOf="@id/key_plus" />
+        app:layout_constraintEnd_toEndOf="@id/key_plus"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_4"
@@ -83,7 +83,8 @@
         android:text="@string/key_4"
         app:layout_constraintTop_toBottomOf="@id/key_1"
         app:layout_constraintStart_toStartOf="@id/key_1"
-        app:layout_constraintEnd_toEndOf="@id/key_1" />
+        app:layout_constraintEnd_toEndOf="@id/key_1"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_5"
@@ -92,7 +93,8 @@
         android:text="@string/key_5"
         app:layout_constraintTop_toBottomOf="@id/key_2"
         app:layout_constraintStart_toStartOf="@id/key_2"
-        app:layout_constraintEnd_toEndOf="@id/key_2" />
+        app:layout_constraintEnd_toEndOf="@id/key_2"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_6"
@@ -101,7 +103,8 @@
         android:text="@string/key_6"
         app:layout_constraintTop_toBottomOf="@id/key_3"
         app:layout_constraintStart_toStartOf="@id/key_3"
-        app:layout_constraintEnd_toEndOf="@id/key_3" />
+        app:layout_constraintEnd_toEndOf="@id/key_3"
+        style="@style/CalcStyle1"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -111,7 +114,8 @@
         android:text="@string/key_7"
         app:layout_constraintTop_toBottomOf="@id/key_4"
         app:layout_constraintStart_toStartOf="@id/key_4"
-        app:layout_constraintEnd_toEndOf="@id/key_4" />
+        app:layout_constraintEnd_toEndOf="@id/key_4"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_8"
@@ -120,7 +124,8 @@
         android:text="@string/key_8"
         app:layout_constraintTop_toBottomOf="@id/key_5"
         app:layout_constraintStart_toStartOf="@id/key_5"
-        app:layout_constraintEnd_toEndOf="@id/key_5" />
+        app:layout_constraintEnd_toEndOf="@id/key_5"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_9"
@@ -129,7 +134,8 @@
         android:text="@string/key_9"
         app:layout_constraintTop_toBottomOf="@id/key_6"
         app:layout_constraintStart_toStartOf="@id/key_6"
-        app:layout_constraintEnd_toEndOf="@id/key_6" />
+        app:layout_constraintEnd_toEndOf="@id/key_6"
+        style="@style/CalcStyle1"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -139,7 +145,8 @@
         android:text="@string/key_0"
         app:layout_constraintTop_toBottomOf="@id/key_7"
         app:layout_constraintStart_toStartOf="@id/key_7"
-        app:layout_constraintEnd_toEndOf="@id/key_7" />
+        app:layout_constraintEnd_toEndOf="@id/key_7"
+        style="@style/CalcStyle1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_result"
@@ -148,7 +155,8 @@
         android:text="@string/result"
         app:layout_constraintTop_toBottomOf="@id/key_8"
         app:layout_constraintStart_toStartOf="@id/key_8"
-        app:layout_constraintEnd_toEndOf="@id/key_8" />
+        app:layout_constraintEnd_toEndOf="@id/key_8"
+        style="@style/CalcStyle2"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_clear"
@@ -157,7 +165,8 @@
         android:text="@string/key_clear"
         app:layout_constraintTop_toBottomOf="@id/key_9"
         app:layout_constraintStart_toStartOf="@id/key_9"
-        app:layout_constraintEnd_toEndOf="@id/key_9" />
+        app:layout_constraintEnd_toEndOf="@id/key_9"
+        style="@style/CalcStyle2"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_plus"
@@ -167,7 +176,8 @@
         android:text="@string/key_plus"
         app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/CalcStyle2"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_minus"
@@ -176,7 +186,8 @@
         android:text="@string/key_minus"
         app:layout_constraintTop_toBottomOf="@id/key_plus"
         app:layout_constraintStart_toEndOf="@id/key_6"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/CalcStyle2"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_multiply"
@@ -185,7 +196,8 @@
         android:text="@string/key_multiply"
         app:layout_constraintTop_toBottomOf="@id/key_minus"
         app:layout_constraintStart_toEndOf="@id/key_9"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/CalcStyle2"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_divide"
@@ -194,7 +206,8 @@
         android:text="@string/key_divide"
         app:layout_constraintTop_toBottomOf="@id/key_multiply"
         app:layout_constraintStart_toEndOf="@id/key_clear"
-        app:layout_constraintEnd_toEndOf="@id/key_multiply" />
+        app:layout_constraintEnd_toEndOf="@id/key_multiply"
+        style="@style/CalcStyle2"/>
 
 
 
