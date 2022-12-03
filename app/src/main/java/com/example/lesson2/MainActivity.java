@@ -13,15 +13,18 @@ public class MainActivity extends AppCompatActivity {
 
     private int first_number = 0;
     private int second_number = 0;
+    private int second_not_empty = 0;
     private final int count = 10;
     private int operation = 0;
     private int resultnumbers = 0;
     private int counting = 0;
     private TextView result;
 
-    // проблемы: деление на ноль, отображение секонд намбер в 0
+
     // Задачи второго уровня: дробные числа
     // Сохранение текста при перевороте экрана - завтра
+    // Скрол
+    // SaveInstanteState
 
 
     @Override
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 1;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 2;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -70,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 3;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 4;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -94,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 5;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -106,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 6;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -118,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 7;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -130,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 8;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -142,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     showResult();
                 } else {
                     second_number = second_number * count + 9;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -153,7 +165,8 @@ public class MainActivity extends AppCompatActivity {
                     first_number = first_number * count;
                     showResult();
                 } else {
-                    second_number = second_number * count;
+                    second_number = second_number * count ;
+                    second_not_empty = 1;
                 }
                 showResult();
             }
@@ -164,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 first_number = 0;
                 operation = 0;
                 second_number = 0;
+                second_not_empty =0;
                 showResult();
             }
         });
@@ -202,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
                 CountingResult();
                 showResult();
                 counting = counting - 1;
+                second_number = 0;
             }
         });
     }
@@ -220,14 +235,12 @@ public class MainActivity extends AppCompatActivity {
         }
         ;
         if (operation == 4 && counting == 1) {
-            resultnumbers = first_number / second_number;
+            if (second_number == 0) {
+                result.setText(String.valueOf("НИЗЯ!"));}
+            else {
+            resultnumbers = first_number / second_number;}
         }
         ;
-        if (operation == 4 && counting == 1 && second_number == 0) {
-            result.setText(String.valueOf("НИЗЯ!"));
-        }
-        ;
-
 
     }
 
@@ -245,16 +258,16 @@ public class MainActivity extends AppCompatActivity {
         if (operation == 4) {
             result.setText(String.valueOf(first_number + "  /"));
         }
-        if (operation == 4 && second_number != 0) {
+        if (operation == 4 && second_not_empty != 0) {
             result.setText(String.valueOf(first_number + "  /  " + second_number));
         }
-        if (operation == 3 && second_number != 0) {
+        if (operation == 3 && second_not_empty != 0) {
             result.setText(String.valueOf(first_number + "  *  " + second_number));
         }
-        if (operation == 2 && second_number != 0) {
+        if (operation == 2 && second_not_empty != 0) {
             result.setText(String.valueOf(first_number + "  -  " + second_number));
         }
-        if (operation == 1 && second_number != 0) {
+        if (operation == 1 && second_not_empty != 0) {
             result.setText(String.valueOf(first_number + "  +  " + second_number));
         }
         if (operation == 1 && counting == 1) {
@@ -267,7 +280,11 @@ public class MainActivity extends AppCompatActivity {
             result.setText(String.valueOf(first_number + "  *  " + second_number + " = " + resultnumbers));
         }
         if (operation == 4 && counting == 1) {
-            result.setText(String.valueOf(first_number + "  /  " + second_number + " = " + resultnumbers));
+            if (second_number == 0) {
+                result.setText(String.valueOf("НИЗЯ!"));
+            } else {
+                result.setText(String.valueOf(first_number + "  /  " + second_number + " = " + resultnumbers));
+            }
         }
     }
 

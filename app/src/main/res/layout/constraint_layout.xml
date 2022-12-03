@@ -7,18 +7,11 @@
     tools:ignore="ExtraText">
 
 
-    // backgroundtint - сделано
-    //corner radius - сделано
-    //Inputedittext - сделано
-    // Кнопки другого цвета -  сделано
+
     // размер шрифта - сделано
     // все внести в ресурсы @dimen @color - сделано
     // создать папку стайл в ресурсах - сделано
-    //textappereance - сделано
-    //statusbarcolor - сделано
-    // перенести текст выше - сделано
-    // coloronprimary - сделано
-    // все перевести на MaterialButtonstyle - сделано
+
 
 
 
