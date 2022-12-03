@@ -11,19 +11,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int first_number = 0;
-    private int second_number = 0;
+    private float first_number = 0;
+    private float second_number = 0;
     private int second_not_empty = 0;
     private final int count = 10;
     private int operation = 0;
-    private int resultnumbers = 0;
+    private float resultnumbers = 0;
     private int counting = 0;
     private TextView result;
 
 
-    // Задачи второго уровня: дробные числа
-    // Сохранение текста при перевороте экрана - завтра
-    // Скрол
+
+
     // SaveInstanteState
 
 
@@ -245,45 +244,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showResult() {
-        result.setText(String.valueOf(first_number));
+        result.setText(String.valueOf(Math.round(first_number)));
         if (operation == 1) {
-            result.setText(String.valueOf(first_number + "  +"));
+            result.setText(String.valueOf(Math.round(first_number) + "  +"));
         }
         if (operation == 2) {
-            result.setText(String.valueOf(first_number + "  -"));
+            result.setText(String.valueOf(Math.round(first_number) + "  -"));
         }
         if (operation == 3) {
-            result.setText(String.valueOf(first_number + "  *"));
+            result.setText(String.valueOf(Math.round(first_number) + "  *"));
         }
         if (operation == 4) {
-            result.setText(String.valueOf(first_number + "  /"));
+            result.setText(String.valueOf(Math.round(first_number) + "  /"));
         }
         if (operation == 4 && second_not_empty != 0) {
-            result.setText(String.valueOf(first_number + "  /  " + second_number));
+            result.setText(String.valueOf(Math.round(first_number) + "  /  " + Math.round(second_number)));
         }
         if (operation == 3 && second_not_empty != 0) {
-            result.setText(String.valueOf(first_number + "  *  " + second_number));
+            result.setText(String.valueOf(Math.round(first_number) + "  *  " + Math.round(second_number)));
         }
         if (operation == 2 && second_not_empty != 0) {
-            result.setText(String.valueOf(first_number + "  -  " + second_number));
+            result.setText(String.valueOf(Math.round(first_number) + "  -  " + Math.round(second_number)));
         }
         if (operation == 1 && second_not_empty != 0) {
-            result.setText(String.valueOf(first_number + "  +  " + second_number));
+            result.setText(String.valueOf(Math.round(first_number) + "  +  " + Math.round(second_number)));
         }
         if (operation == 1 && counting == 1) {
-            result.setText(String.valueOf(first_number + "  +  " + second_number + " = " + resultnumbers));
+            result.setText(String.valueOf(Math.round(first_number) + "  +  " + Math.round(second_number) + " = " + resultnumbers));
         }
         if (operation == 2 && counting == 1) {
-            result.setText(String.valueOf(first_number + "  -  " + second_number + " = " + resultnumbers));
+            result.setText(String.valueOf(Math.round(first_number) + "  -  " + Math.round(second_number) + " = " + resultnumbers));
         }
         if (operation == 3 && counting == 1) {
-            result.setText(String.valueOf(first_number + "  *  " + second_number + " = " + resultnumbers));
+            result.setText(String.valueOf(Math.round(first_number) + "  *  " + Math.round(second_number) + " = " + resultnumbers));
         }
         if (operation == 4 && counting == 1) {
             if (second_number == 0) {
                 result.setText(String.valueOf("НИЗЯ!"));
             } else {
-                result.setText(String.valueOf(first_number + "  /  " + second_number + " = " + resultnumbers));
+                result.setText(String.valueOf(Math.round(first_number) + "  /  " + Math.round(second_number) + " = " + resultnumbers));
             }
         }
     }
