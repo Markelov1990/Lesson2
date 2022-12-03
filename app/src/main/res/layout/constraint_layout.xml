@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+
+
+    // backgroundtint - в стиле
+    //corner radius - в стиле
+    //Inputedittext - что это?
+    //Scroll - сегодня
+    // horizontal - сегодня
+    // Кнопки другого цвета - в стиле
+    // тема темная/светлая - переключение между стилями
+    // размер шрифта - в стиле
+    // все внести в ресурсы @dimen @color - сегодня
+    // создать папку стайл в ресурсах - в стиле
+    //textappereance - прочитать
+    //statusbarcolor - прочитать
+    // локализация названия - прочитать
+    // перенести текст выше - сделано
+    // coloronprimary - прочитать
+    // все перевести на MaterialButtonstyle - сделано
+    // смена тем - завтра
+
 
     <TextView
         android:layout_width="0dp"
@@ -11,50 +33,50 @@
         android:textSize="40sp"
         android:gravity="center"
         android:layout_marginTop="60dp"
-        app:layout_constraintTop_toBottomOf="@id/key_0"
-        app:layout_constraintStart_toStartOf="@id/key_0"
-        app:layout_constraintEnd_toEndOf="@id/key_divide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/key_plus"
         />
 
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/key_1"
         android:layout_marginTop="50dp"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/key_2"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/key_2"
         android:layout_marginTop="50dp"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_1"
         app:layout_constraintEnd_toStartOf="@id/key_3" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/key_3"
         android:layout_marginTop="50dp"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_2"
         app:layout_constraintEnd_toEndOf="@id/key_plus" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -63,7 +85,7 @@
         app:layout_constraintStart_toStartOf="@id/key_1"
         app:layout_constraintEnd_toEndOf="@id/key_1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -72,7 +94,7 @@
         app:layout_constraintStart_toStartOf="@id/key_2"
         app:layout_constraintEnd_toEndOf="@id/key_2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -82,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="@id/key_3" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -91,7 +113,7 @@
         app:layout_constraintStart_toStartOf="@id/key_4"
         app:layout_constraintEnd_toEndOf="@id/key_4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -100,7 +122,7 @@
         app:layout_constraintStart_toStartOf="@id/key_5"
         app:layout_constraintEnd_toEndOf="@id/key_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_9"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -110,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="@id/key_6" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -119,7 +141,7 @@
         app:layout_constraintStart_toStartOf="@id/key_7"
         app:layout_constraintEnd_toEndOf="@id/key_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -128,7 +150,7 @@
         app:layout_constraintStart_toStartOf="@id/key_8"
         app:layout_constraintEnd_toEndOf="@id/key_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_clear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -137,17 +159,17 @@
         app:layout_constraintStart_toStartOf="@id/key_9"
         app:layout_constraintEnd_toEndOf="@id/key_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_plus"
         android:layout_width="0dp"
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
         android:text="@string/key_plus"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_number"
         app:layout_constraintStart_toEndOf="@id/key_3"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_minus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -156,7 +178,7 @@
         app:layout_constraintStart_toEndOf="@id/key_6"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_multiply"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -165,7 +187,7 @@
         app:layout_constraintStart_toEndOf="@id/key_9"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/key_divide"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
