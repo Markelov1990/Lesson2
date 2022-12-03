@@ -4,7 +4,7 @@
 
         <item name="android:textColor"> @color/button_text </item>
         <item name="android:backgroundTint"> @color/button </item>
-        <item name="android:backgroundTint"> @color/button </item>
+
 
     </style>
 
