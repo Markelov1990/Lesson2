@@ -1,5 +1,6 @@
 package com.example.lesson2;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -29,13 +30,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        erstNummer();
+        Context context = this;
+        Context appContext = getApplicationContext();
+
+        SomeSingleton.getINSTANCE(appContext);
+
+        setContentView(R.layout.constraint_layout);
+
+        Calculator();
         showResult();
     }
 
-    private void erstNummer() {
+    private void Calculator() {
         result = findViewById(R.id.first_number);
         showResult();
 
