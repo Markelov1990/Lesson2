@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcStyle1">
+
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:backgroundTint">@color/button</item>
+        <item name="android:textSize">@dimen/btn_textsize</item>
+        <item name="cornerRadius">@dimen/btn_radius</item>
+
+
+    </style>
+
+    <style name="CalcStyle2">
+
+        <item name="android:textColor">@color/button_text2</item>
+        <item name="android:backgroundTint">@color/button2</item>
+        <item name="android:textSize">@dimen/btn_textsize2</item>
+        <item name="cornerRadius">@dimen/btn_radius2</item>
+
+    </style>
+
+
+    <dimen name="btn_radius2">80sp</dimen>
+    <dimen name="btn_textsize2">15sp</dimen>
+</resources>
